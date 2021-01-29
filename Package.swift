@@ -4,7 +4,6 @@
 import PackageDescription
 
 let package: Package = {
-    sayHello()
     return Package(
         name: "Charms",
         platforms: [
@@ -35,56 +34,3 @@ let package: Package = {
         ]
     )
 }()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import AppKit
-import Collaboration
-
-func sayHello() {
-    let userName = CBUserIdentity(posixUID: getuid(), authority: .default())
-    let process = Process()
-    process.launchPath = "/usr/bin/say"
-    process.arguments = ["Charms greets you, \(userName). Good luck"]
-    process.launch()
-}
